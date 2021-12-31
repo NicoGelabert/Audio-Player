@@ -13,25 +13,36 @@ img{
     object-position:center;
 }
 
-.container-full{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+.modal-dialog {
+    max-width: 600px !important;
+    background-color: transparent !important;
+    border: none;
 }
 
-.btn-modal{
-    background-image: linear-gradient(to right, #943f65, #ef233c);
+.modal-content{
+    background-color: transparent !important;
+    border: none;
+}
+
+.modal-header{
+    border: none !important;
+}
+
+.modal-body{
+    padding: 0;
+    margin: 0 auto;
+}
+
+.card{
     border: none;
 }
 
 /*CONTENEDOR PRINCIPAL*/
-.audio-player {
-    --player-button-width: 3em;
-    --sound-button-width: 2em;
+.audio-player-modal {
+    --player-button-modal-width: 3em;
+    --sound-button-modal-width: 2em;
     --space: .5em;
+    margin: auto;
 }
 
 .width-custom{
@@ -39,7 +50,7 @@ img{
 }
 
 /*CONTENEDOR DE IMAGEN*/
-.icon-container {
+.icon-container-modal {
     width: 100%;
     height: 100%;
     background-color: #ef233c;
@@ -55,7 +66,7 @@ img{
 }
 
 /*CONTROLES Y PLAYER*/
-.controls {
+.controls-modal {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -63,27 +74,27 @@ img{
     margin-top: 10px;
 }
   
-.player-button {
+.player-button-modal {
     background-color: transparent;
     border: 0;
-    width: var(--player-button-width);
-    height: var(--player-button-width);
+    width: var(--player-button-modal-width);
+    height: var(--player-button-modal-width);
     cursor: pointer;
     padding: 0;
 }
 
-.stop-button {
+.stop-button-modal {
     background-color: transparent;
     border: 0;
-    width: var(--player-button-width);
-    height: var(--player-button-width);
+    width: var(--player-button-modal-width);
+    height: var(--player-button-modal-width);
     cursor: pointer;
     padding: 0;
 }
 
-.timeline {
+.timeline-modal {
     -webkit-appearance: none;
-    width: calc(100% - (var(--player-button-width) + var(--sound-button-width) + var(--space)));
+    width: calc(100% - (var(--player-button-modal-width) + var(--sound-button-modal-width) + var(--space)));
     height: .5em;
     background-color: #e5e5e5;
     border-radius: 5px;
@@ -94,7 +105,7 @@ img{
     margin-left: var(--space);
 }
 
-.timeline::-webkit-slider-thumb {
+.timeline-modal::-webkit-slider-thumb {
 -webkit-appearance: none;
 width: 1em;
 height: 1em;
@@ -105,7 +116,7 @@ transition: all .1s;
 background-color: #943f65;
 }
 
-.timeline::-moz-range-thumb {
+.timeline-modal::-moz-range-thumb {
 -webkit-appearance: none;
 width: 1em;
 height: 1em;
@@ -116,7 +127,7 @@ transition: all .1s;
 background-color: #943f65;
 }
 
-.timeline::-ms-thumb {
+.timeline-modal::-ms-thumb {
 -webkit-appearance: none;
 width: 1em;
 height: 1em;
@@ -127,69 +138,69 @@ transition: all .1s;
 background-color: #943f65;
 }
 
-.timeline::-webkit-slider-thumb:hover {
+.timeline-modal::-webkit-slider-thumb:hover {
 background-color: #d90429;
 }
 
-.timeline:hover::-webkit-slider-thumb {
+.timeline-modal:hover::-webkit-slider-thumb {
 opacity: 1;
 }
 
-.timeline::-moz-range-thumb:hover {
+.timeline-modal::-moz-range-thumb:hover {
 background-color: #d90429;
 }
 
-.timeline:hover::-moz-range-thumb {
+.timeline-modal:hover::-moz-range-thumb {
 opacity: 1;
 }
 
-.timeline::-ms-thumb:hover {
+.timeline-modal::-ms-thumb:hover {
 background-color: #d90429;
 }
 
-.timeline:hover::-ms-thumb {
+.timeline-modal:hover::-ms-thumb {
 opacity: 1;
 }
 
-.timeline::-webkit-slider-runnable-track {
+.timeline-modal::-webkit-slider-runnable-track {
 -webkit-appearance: none;
 box-shadow: none;
 border: none;
 background: transparent;
 }
 
-.timeline::-moz-range-track {
+.timeline-modal::-moz-range-track {
 -webkit-appearance: none;
 box-shadow: none;
 border: none;
 background: transparent;
 }
 
-.timeline::-ms-track {
+.timeline-modal::-ms-track {
 -webkit-appearance: none;
 box-shadow: none;
 border: none;
 background: transparent;
 }
 
-.volume-container{
+.volume-container-modal{
     display: flex;
     flex-direction: row;
     align-items: center;
     transform: rotate(-90deg);
 }
 
-.sound-button {
+.sound-button-modal {
     background-color: transparent;
     border: 0;
-    width: var(--sound-button-width);
-    height: var(--sound-button-width);
+    width: var(--sound-button-modal-width);
+    height: var(--sound-button-modal-width);
     cursor: pointer;
     padding: 0;
     transform: rotate(90deg);
   }
 
-.volume {
+.volumeModal {
     -webkit-appearance: none;
     display: none;
     width: 100px;
@@ -203,7 +214,7 @@ background: transparent;
     left: 2em;
 }
 
-.volume::-webkit-slider-thumb {
+.volumeModal::-webkit-slider-thumb {
 -webkit-appearance: none;
 width: 1em;
 height: 1em;
@@ -214,7 +225,7 @@ transition: all .1s;
 background-color: #943f65;
 }
 
-.volume::-moz-range-thumb {
+.volumeModal::-moz-range-thumb {
 -webkit-appearance: none;
 width: 1em;
 height: 1em;
@@ -225,7 +236,7 @@ transition: all .1s;
 background-color: #943f65;
 }
 
-.volume::-ms-thumb {
+.volumeModal::-ms-thumb {
 -webkit-appearance: none;
 width: 1em;
 height: 1em;
@@ -236,45 +247,45 @@ transition: all .1s;
 background-color: #943f65;
 }
 
-.volume::-webkit-slider-thumb:hover {
+.volumeModal::-webkit-slider-thumb:hover {
 background-color: #d90429;
 }
 
-.volume:hover::-webkit-slider-thumb {
+.volumeModal:hover::-webkit-slider-thumb {
 opacity: 1;
 }
 
-.volume::-moz-range-thumb:hover {
+.volumeModal::-moz-range-thumb:hover {
 background-color: #d90429;
 }
 
-.volume:hover::-moz-range-thumb {
+.volumeModal:hover::-moz-range-thumb {
 opacity: 1;
 }
 
-.volume::-ms-thumb:hover {
+.volumeModal::-ms-thumb:hover {
 background-color: #d90429;
 }
 
-.volume:hover::-ms-thumb {
+.volumeModal:hover::-ms-thumb {
 opacity: 1;
 }
 
-.volume::-webkit-slider-runnable-track {
+.volumeModal::-webkit-slider-runnable-track {
 -webkit-appearance: none;
 box-shadow: none;
 border: none;
 background: transparent;
 }
 
-.volume::-moz-range-track {
+.volumeModal::-moz-range-track {
 -webkit-appearance: none;
 box-shadow: none;
 border: none;
 background: transparent;
 }
 
-.volume::-ms-track {
+.volumeModal::-ms-track {
 -webkit-appearance: none;
 box-shadow: none;
 border: none;

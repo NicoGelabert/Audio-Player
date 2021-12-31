@@ -100,3 +100,6 @@ function stopAudio () {
 }
 
 stopButton.addEventListener('click', stopAudio);
+
+// MODAL
+
